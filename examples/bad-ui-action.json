@@ -1,0 +1,11 @@
+{
+  "meta": { "name": "按钮动作写错", "version": "1.0" },
+  "uiInjection": [
+    {
+      "location": "toolbar",
+      "action": "insert",
+      "label": "插入日期",
+      "text": "2026-10-27"
+    }
+  ]
+}

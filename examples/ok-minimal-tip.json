@@ -1,0 +1,11 @@
+{
+  "meta": { "name": "最小提示块", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "block",
+      "fence": "tip",
+      "replacement": "<div class=\"ext-tip\">$content</div>"
+    }
+  ],
+  "cssInjection": ".markdown-body .ext-tip{border-left:4px solid #e0a300;background:#fff8e1;border-radius:8px;padding:.6em 1em;margin:.9em 0;break-inside:avoid}"
+}

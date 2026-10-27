@@ -1,0 +1,10 @@
+{
+  "meta": { "name": "围栏模板忘了 $content", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "block",
+      "fence": "tb-tip",
+      "replacement": "<div class=\"ext-tip\"><div class=\"ext-tip-h\">提示</div></div>"
+    }
+  ]
+}

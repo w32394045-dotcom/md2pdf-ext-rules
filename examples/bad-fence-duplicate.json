@@ -1,0 +1,15 @@
+{
+  "meta": { "name": "围栏重名", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "block",
+      "fence": "tb-tip",
+      "replacement": "<div class=\"ext-tip\">$content</div>"
+    },
+    {
+      "type": "block",
+      "fence": "tb-tip",
+      "replacement": "<div class=\"ext-tip2\">$content</div>"
+    }
+  ]
+}

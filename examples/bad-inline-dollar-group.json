@@ -1,0 +1,10 @@
+{
+  "meta": { "name": "$2 超出捕获组数", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "inline",
+      "pattern": "\\[\\[t:([^\\]]+)\\]\\]",
+      "replacement": "<span class=\"ext-tag\">$1 / $2</span>"
+    }
+  ]
+}

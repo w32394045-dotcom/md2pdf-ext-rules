@@ -1,0 +1,23 @@
+{
+  "meta": { "name": "中文标点与行内颜色", "version": "1.0" },
+
+  "preProcess": [
+    { "pattern": "(?<![\\w.])\\.\\.\\.(?![\\w.])", "replacement": "…", "flags": "g" },
+    { "pattern": "(?<![\\w-])--(?![\\w-])", "replacement": "—", "flags": "g" }
+  ],
+
+  "customSyntax": [
+    {
+      "type": "inline",
+      "pattern": "\\[\\[c:(red|blue|green):([^\\]]+)\\]\\]",
+      "replacement": "<span class=\"ext-c ext-$1\">$2</span>"
+    },
+    {
+      "type": "inline",
+      "pattern": "\\[\\[#(\\d{1,3})\\]\\]",
+      "replacement": "<span class=\"ext-qno\">第 $1 题</span>"
+    }
+  ],
+
+  "cssInjection": ".markdown-body .ext-c{font-weight:600}\n.markdown-body .ext-red{color:#dc2626}\n.markdown-body .ext-blue{color:#2563eb}\n.markdown-body .ext-green{color:#16a34a}\n.markdown-body .ext-qno{display:inline-block;min-width:1.9em;padding:.05em .45em;border-radius:999px;background:var(--doc-accent);color:#fff;font-weight:700;font-size:.86em;text-align:center}"
+}

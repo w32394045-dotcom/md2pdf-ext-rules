@@ -1,0 +1,10 @@
+{
+  "meta": { "name": "嵌套量词（回溯告警）", "version": "1.0" },
+  "preProcess": [
+    {
+      "pattern": "(a+)+",
+      "replacement": "x",
+      "flags": "g"
+    }
+  ]
+}

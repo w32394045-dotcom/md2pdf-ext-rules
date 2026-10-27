@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "漏了 g 标志", "version": "1.0" },
+  "preProcess": [
+    {
+      "pattern": "也许",
+      "replacement": "可能"
+    }
+  ]
+}

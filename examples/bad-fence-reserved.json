@@ -1,0 +1,15 @@
+{
+  "meta": { "name": "围栏撞内置（会静默跳过）", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "block",
+      "fence": "html",
+      "replacement": "<div class=\"ext-html\">$content</div>"
+    },
+    {
+      "type": "block",
+      "fence": "tb-note",
+      "replacement": "<div class=\"ext-note\">$content</div>"
+    }
+  ]
+}

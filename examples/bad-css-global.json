@@ -1,0 +1,11 @@
+{
+  "meta": { "name": "全局选择器 + 外链样式", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "block",
+      "fence": "tb-tip",
+      "replacement": "<div class=\"ext-tip\">$content</div>"
+    }
+  ],
+  "cssInjection": "@import url(\"https://example.com/base.css\");\nbody{margin:0}\nhtml{font-size:20px}\n.toolbar{display:none}\n.ext-tip{background:url(https://example.com/bg.png) repeat;width:expression(alert(1))}\n*{box-sizing:border-box}"
+}

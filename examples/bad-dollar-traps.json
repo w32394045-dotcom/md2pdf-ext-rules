@@ -1,0 +1,10 @@
+{
+  "meta": { "name": "替换串里的 $ 陷阱", "version": "1.0" },
+  "preProcess": [
+    {
+      "pattern": "(价格)",
+      "replacement": "[$`][$'][$5][$$]",
+      "flags": "g"
+    }
+  ]
+}

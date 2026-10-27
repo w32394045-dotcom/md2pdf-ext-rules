@@ -1,0 +1,46 @@
+{
+  "meta": { "name": "题包 / 讲义扩展", "version": "1.0" },
+
+  "preProcess": [
+    { "pattern": "\\.\\.\\.", "replacement": "…", "flags": "g" }
+  ],
+
+  "customSyntax": [
+    {
+      "type": "inline",
+      "pattern": "\\[\\[t:([^\\]]+)\\]\\]",
+      "replacement": "<span class=\"ext-tag\">$1</span>"
+    },
+    {
+      "type": "inline",
+      "pattern": "\\{易错:([^{}]+)\\}",
+      "replacement": "<span class=\"ext-warn\"><b>易错</b>：$1</span>"
+    },
+    {
+      "type": "block",
+      "fence": "tb-tip",
+      "replacement": "<div class=\"ext-card ext-tip\"><div class=\"ext-card-h\">提示</div>$content</div>"
+    },
+    {
+      "type": "block",
+      "fence": "tb-warn",
+      "replacement": "<div class=\"ext-card ext-warn\"><div class=\"ext-card-h\">易错点</div>$content</div>"
+    },
+    {
+      "type": "block",
+      "fence": "tb-ans",
+      "replacement": "<div class=\"ext-card ext-ans\"><div class=\"ext-card-h\">答案与解析</div>$content</div>"
+    }
+  ],
+
+  "uiInjection": [
+    {
+      "location": "toolbar",
+      "action": "insertText",
+      "label": "插入答案区",
+      "text": "\n```tb-ans\n\n```\n"
+    }
+  ],
+
+  "cssInjection": ".markdown-body .ext-card{border-radius:10px;padding:.65em 1em;margin:.9em 0;break-inside:avoid;background:var(--doc-surface);border:1px solid var(--doc-line);border-left:4px solid var(--doc-accent)}\n.markdown-body .ext-card-h{font-weight:700;margin-bottom:.3em;color:var(--doc-accent)}\n.markdown-body .ext-card.ext-warn{border-left-color:#d64545}\n.markdown-body .ext-card.ext-warn .ext-card-h{color:#b91c1c}\n.markdown-body .ext-card.ext-ans{border-left-color:#16a34a}\n.markdown-body .ext-card.ext-ans .ext-card-h{color:#15803d}\n.markdown-body .ext-card > :last-child{margin-bottom:0}\n.markdown-body .ext-card p{margin:.35em 0}\n.markdown-body .ext-tag{display:inline-block;padding:0 .4em;margin:0 .1em;border-radius:4px;background:var(--doc-quote);color:var(--doc-accent);font-size:.92em;font-weight:600;border:1px solid var(--doc-line)}\n.markdown-body .ext-warn{color:#b91c1c}"
+}

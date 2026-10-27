@@ -1,0 +1,69 @@
+{
+  "note": "selftest.py 的期望值。md2pdf 栏是用工具内置校验器 extValidate 实测出来的真实结论；checker.warns 是 check_ext.py 应该额外报出的告警码。",
+  "files": {
+    "ok-minimal-tip.json": {
+      "md2pdf": { "ok": true }
+    },
+    "ok-teaching-pack.json": {
+      "md2pdf": { "ok": true }
+    },
+    "ok-typography.json": {
+      "md2pdf": { "ok": true }
+    },
+
+    "bad-json-syntax.json": {
+      "md2pdf": { "ok": false, "code": "json" }
+    },
+    "bad-null-field.json": {
+      "md2pdf": { "ok": false, "code": "field" }
+    },
+    "bad-content-missing.json": {
+      "md2pdf": { "ok": false, "code": "contentMissing" }
+    },
+    "bad-content-in-attr.json": {
+      "md2pdf": { "ok": false, "code": "unsafeTemplate" }
+    },
+    "bad-inline-bare-attr.json": {
+      "md2pdf": { "ok": false, "code": "unsafeTemplate" }
+    },
+    "bad-fence-duplicate.json": {
+      "md2pdf": { "ok": false, "code": "field" }
+    },
+    "bad-ui-action.json": {
+      "md2pdf": { "ok": false, "code": "field" }
+    },
+
+    "bad-fence-reserved.json": {
+      "md2pdf": { "ok": true },
+      "checker": { "warns": ["fenceConflict"] }
+    },
+    "bad-backtrack.json": {
+      "md2pdf": { "ok": true },
+      "checker": { "warns": ["backtrack"] }
+    },
+    "bad-css-global.json": {
+      "md2pdf": { "ok": true },
+      "checker": { "warns": ["css-global"] }
+    },
+    "bad-dollar-traps.json": {
+      "md2pdf": { "ok": true },
+      "checker": { "warns": ["dollar-replacement"] }
+    },
+    "bad-no-g.json": {
+      "md2pdf": { "ok": true },
+      "checker": { "warns": ["no-g-flag"] }
+    },
+    "bad-inline-dollar-group.json": {
+      "md2pdf": { "ok": true, "note": "只有 1 个捕获组却写 $2：能加载，运行时 $2 变空串" },
+      "checker": { "warns": ["dollar-replacement"] }
+    },
+    "bad-truncate.json": {
+      "md2pdf": { "ok": true, "note": "name/version/label/text 静默截断" },
+      "checker": { "warns": ["truncate"] }
+    },
+    "bad-unknown-field.json": {
+      "md2pdf": { "ok": true, "note": "customsyntax 拼错被静默忽略" },
+      "checker": { "warns": ["unknown-key"] }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "meta": { "name": "$1 裸插属性", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "inline",
+      "pattern": "\\[\\[t:([^\\]]+)\\]\\]",
+      "replacement": "<span class=$1>$1</span>"
+    }
+  ]
+}

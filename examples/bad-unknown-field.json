@@ -1,0 +1,11 @@
+{
+  "meta": { "name": "键名拼错（会静默失效）", "version": "1.0" },
+  "customsyntax": [
+    {
+      "type": "inline",
+      "pattern": "\\[\\[t:([^\\]]+)\\]\\]",
+      "replacement": "<span class=\"ext-tag\">$1</span>",
+      "flags": "gi"
+    }
+  ]
+}

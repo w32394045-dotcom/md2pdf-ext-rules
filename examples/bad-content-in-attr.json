@@ -1,0 +1,10 @@
+{
+  "meta": { "name": "$content 放进属性", "version": "1.0" },
+  "customSyntax": [
+    {
+      "type": "block",
+      "fence": "tb-tip",
+      "replacement": "<div class=\"$content\">正文</div>"
+    }
+  ]
+}
